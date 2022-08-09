@@ -8,12 +8,12 @@ const subtract = function(num1, num2) {
  return sumzy;
 };
 
-const sum = function() {
+const sum = function(...args) {
   let total = 0;
   for (const arg of args) {
     total += arg;
   }
-  return total;
+  return parseInt(total);
 };
 
 const multiply = function() {
