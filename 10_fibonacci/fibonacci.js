@@ -1,10 +1,10 @@
 const fibonacci = function(n) {
     let arr = [1, 1];
-    if (n < 0) {
+    if (n < 0 || n == 0) {
         return "OOPS";
     }
-    else if (n == 1 || n ==2) {
-        return 1
+    else if (n == 1 || n == 2) {
+        return 1; 
     }
     else {
         for (let i = 0, j = 1; (j + 1) < n; i++, j++) {
