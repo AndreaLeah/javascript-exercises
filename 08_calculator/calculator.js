@@ -28,12 +28,21 @@ const multiply = function(...args) {
   return total;
 };
 
-const power = function() {
-	
+const power = function(a, b) {
+	return Math.pow(a, b);
 };
 
-const factorial = function() {
-	
+const factorial = function(j) {
+  let answer = 1;
+	if (j == 0 || j == 1) {
+    return answer;
+  }
+  else {
+    for (let i = j; i >= 1; i--) {
+      answer = answer * i;
+    }
+  return answer;
+  }
 };
 
 // Do not edit below this line
