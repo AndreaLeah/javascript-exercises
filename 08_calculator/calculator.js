@@ -16,8 +16,16 @@ const sum = function(...args) {
   return total;
 };
 
-const multiply = function() {
-
+const multiply = function(...args) {
+  let total = 0;
+  for (let arg of args[0]) {
+    if (total == 0) {
+      total += arg;
+    }
+    else {
+    total *= arg;
+    }}
+  return total;
 };
 
 const power = function() {
