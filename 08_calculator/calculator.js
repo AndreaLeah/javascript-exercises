@@ -10,10 +10,10 @@ const subtract = function(num1, num2) {
 
 const sum = function(...args) {
   let total = 0;
-  for (const arg of args) {
+  for (let arg of args[0]) {
     total += arg;
   }
-  return parseInt(total);
+  return total;
 };
 
 const multiply = function() {
