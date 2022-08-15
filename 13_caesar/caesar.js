@@ -3,20 +3,19 @@ const caesar = function(string, num) {
     let upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
     string = string.split('');
-    let i = 0;
     let newString = "";
     for (let letter of string) {
         if (letter == letter.toUpperCase()) {
-            string[i] = upperCase[i + num];
+            let i = upperCase.indexOf(letter);
+            let uLetter = upperCase[i + num];
+            newString += uLetter;
         }
         else {
-            string[i] = lowerCase[i + num];
-        }
-        console.log(upperCase[i + 1]);
-        i += 1;
-        }
-    string = string.toString();
-    return string;
+            let i = lowerCase.indexOf(letter);
+            let lLetter = lowerCase[i + num];
+            newString += lLetter;
+        }}
+    return newString;
     };
 
 // Do not edit below this line
