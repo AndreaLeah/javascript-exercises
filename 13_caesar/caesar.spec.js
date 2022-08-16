@@ -12,10 +12,10 @@ test('works with phrases', () => {
 test('works with negative shift', () => {
   expect(caesar('Mjqqt, Btwqi!', -5)).toBe('Hello, World!');
 });
-test.skip('wraps', () => {
+test('wraps', () => {
   expect(caesar('Z', 1)).toBe('A');
 });
-test.skip('works with large shift factors', () => {
+test('works with large shift factors', () => {
   expect(caesar('Hello, World!', 75)).toBe('Ebiil, Tloia!');
 });
 test.skip('works with large negative shift factors', () => {

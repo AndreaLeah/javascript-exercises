@@ -9,9 +9,21 @@ const caesar = function(string, num) {
             newString += letter;
         }
         else {
+          //UpperCase Letter Check
             if (letter == letter.toUpperCase()) {
                 let uLetter;
+                let n;
                 let i = upperCase.indexOf(letter);
+                
+                if (num > 25 && num < 53) {
+                  n = 1;
+                  num = num - (26 * n);
+                }
+                else if (num >52 && num <80) {
+                  n = 2;
+                  num = num - (26 * n);
+                }
+                
                 if (i + num > 25) {
                   i = ((i + num) - 1) - 25
                   uLetter = upperCase[i];
@@ -26,15 +38,26 @@ const caesar = function(string, num) {
                 newString += uLetter;
             }
             else {
+              //Lowercase Letter Check
                 let lLetter;
                 let i = lowerCase.indexOf(letter);
+                
+                if (num > 25 && num < 53) {
+                  n = 1;
+                  num = num - (26 * n);
+                }
+                else if (num >52 && num <80) {
+                  n = 2;
+                  num = num - (26 * n);
+                }
+                
                 if (i + num > 25) {
                   i = ((i + num) - 1) - 25
-                  lLetter = upperCase[i];
+                  lLetter = lowerCase[i];
                 }
                 else if (i + num < 0) {
                   i = (i + num) + 26;
-                  lLetter = upperCase[i];
+                  lLetter = lowerCase[i];
                 }
                 else {
                 lLetter = lowerCase[i + num];
