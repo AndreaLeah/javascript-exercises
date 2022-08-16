@@ -16,6 +16,10 @@ const caesar = function(string, num) {
                   i = ((i + num) - 1) - 25
                   uLetter = upperCase[i];
                 }
+                else if (i + num < 0) {
+                  i = (i + num) + 26;
+                  uLetter = upperCase[i];
+                }
                 else {
                 uLetter = upperCase[i + num];
                 }
@@ -26,6 +30,10 @@ const caesar = function(string, num) {
                 let i = lowerCase.indexOf(letter);
                 if (i + num > 25) {
                   i = ((i + num) - 1) - 25
+                  lLetter = upperCase[i];
+                }
+                else if (i + num < 0) {
+                  i = (i + num) + 26;
                   lLetter = upperCase[i];
                 }
                 else {
